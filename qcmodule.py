@@ -42,9 +42,9 @@ def create_item_object(doi_record):
 	preprint_relation = get_preprint_relation(doi_record),
 	item_type = get_type(doi_record)
 	)
-	if 'author' in doi_record:
+	if 'author' in doi_record and 'creators' not in doi_record:
 		item.add_authors(create_author_objects(doi_record['author']))
-	else:
+	if 'creators' in doi_record and 'author' not in doi_record:
 		item.add_authors(create_author_objects(doi_record['creators']))
 	return(item)
 
