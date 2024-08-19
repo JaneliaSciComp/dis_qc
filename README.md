@@ -4,4 +4,4 @@ In this repository, I'm comparing our database to two other data sources:
 1) Jaime Palay's data recorded in EndNote (which was imported into our database). It looks like those data were mainly gathered starting in 2019, and were gathered entirely manually. 
 2) A spreadsheet downloaded from the dashboard that OA.Works made for HHMI. 
 
-I also compared our database to Janelia's figshare data. I downloaded references for all our figshare data sets using the figshare batch management tool. 
+I also compared Janelia's figshare data downloaded from the API to those data downloaded using the figshare batch management tool. 
