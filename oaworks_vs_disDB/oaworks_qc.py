@@ -1,7 +1,7 @@
 import csv 
-from ..paper_discovery_manual_vs_sync import newsletter_sources as ns
+from ..virginia_manual_vs_sync import newsletter_sources as ns
 
-file = open('/Users/scarlettv/Downloads/report_works_since_01Jan2007.csv', 'r')
+file = open('report_works_since_01Jan2007.csv', 'r')
 lines = list(csv.reader(file, delimiter=',', quotechar='"'))
 file.close()
 header = lines[0]
