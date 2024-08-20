@@ -1,5 +1,7 @@
 import requests
 from datetime import datetime
+from collections.abc import Iterable
+
 
 class Item:
 	def __init__(self, doi=None, source=None, publisher=None, pub_date=None, load_source=None, insert_date=None, newsletter=None, has_relations=None, preprint_relation=None, item_type=None):
@@ -17,6 +19,26 @@ class Item:
 	
 	def add_authors(self, authors):
 		self.author_list.extend(authors)
+	
+	def get_affiliations(self): # https://stackoverflow.com/questions/2158395/flatten-an-irregular-arbitrarily-nested-list-of-lists
+		xs = [a.affiliations for a in self.author_list]
+		result = []
+		for x in xs:
+			if isinstance(x, Iterable) and not isinstance(x, (str, bytes)):
+				result.extend(self.get_affiliations_from_iterable(x))
+			else:
+				result.append(x)
+		return(result)
+	
+	# Helper method to handle recursive calls on nested iterables
+	def get_affiliations_from_iterable(self, iterable):
+		result = []
+		for item in iterable:
+			if isinstance(item, Iterable) and not isinstance(item, (str, bytes)):
+				result.extend(self.get_affiliations_from_iterable(item))
+			else:
+				result.append(item)
+		return result
 
 
 class Author:
@@ -56,13 +78,13 @@ def get_relation_boolean(doi_record):
 
 def get_type(doi_record):
 	if 'type' in doi_record: # crossref
-		if doi_record['type'] == 'journal-article':
-			return('Journal article')
-		if doi_record['type'] == 'posted-content':
-			if doi_record['subtype'] == 'preprint':
-				return('Preprint')
+		if doi_record['type'] == 'posted-content': #values can be: preprint, other
+			return(doi_record['subtype'])
+		else:
+			return(doi_record['type']) #values can be: book-chapter, dataset, grant, journal-article, other, peer-review, proceedings-article(, posted-content)
 	else: # datacite
-		return(doi_record['types']['resourceTypeGeneral'])
+		return(doi_record['types']['resourceTypeGeneral'].lower()) #values can be: Audiovisual, Collection, DataPaper, Dataset, Image, Other, Preprint, Software, Text
+	# I'm making these lowercase for consistency with crossref
 
 def get_preprint_relation(doi_record):
 	if 'jrc_preprint' in doi_record: # Note jrc_preprint is a list
