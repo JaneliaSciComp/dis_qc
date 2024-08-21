@@ -2,9 +2,9 @@ import qcmodule as qc
 from datetime import timedelta
 
 """
-This script parses a spreadsheet of recently inserted DOIs, and produces a new spreadsheet with more relevant metadata. 
-The input file must be downloaded from the DIS DB web interface, on the 'DOIs by insertion date' page.
-The name of the file is hard-coded in this script, right under 'if __name__ == '__main__''.
+This script parses a spreadsheet of recently inserted DOIs, downloaded from the DIS DB web interface.
+Output: a new spreadsheet with more relevant metadata. 
+The name of the file is hard-coded in this script.
 I am using June 1st as my 'inserted since' date since that's about when the DIS pipeline started working pretty reliably.
 """
 
