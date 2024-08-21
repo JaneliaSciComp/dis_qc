@@ -1,4 +1,4 @@
-Here are some quick and dirty scripts to evaluate Janelia's new publication database, which was built by Rob Svirskas in May 2024 for the Data and Information Services department (DIS). Software for that pipeline is in the repository JaneliaSciComp/dis-utilities. 
+Here are some quick and dirty scripts to evaluate Janelia's new publication database, which was built by Rob Svirskas in May 2024 for the Data and Information Services department (DIS). Software for that pipeline is in the repository [JaneliaSciComp/dis-utilities](https://github.com/JaneliaSciComp/dis-utilities). 
 
 In this repository, I'm comparing our database to two other data sources: 
 1) Jaime Palay's data recorded in EndNote (which was imported into our database). These works were gathered entirely manually, and I'm not sure when she started gathering them. 
