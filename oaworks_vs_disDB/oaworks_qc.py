@@ -158,5 +158,9 @@ for item in manual:
 
 # None of the 23 items that I've found manually are in OA.Works.
 
+for item in no_jrc_author[0:16]: # the mysterious 270
+	print(item.doi)
 
+oaw_pp = [ item for item in oaw_items if item.has_preprint_copy=='true' ]
+dis_pp = [ item for item in dis_items if item.item_type=='journal-article' and item.preprint_relation is True ]
 

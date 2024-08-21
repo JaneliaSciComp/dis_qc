@@ -2,6 +2,7 @@ import requests
 from datetime import datetime
 from collections.abc import Iterable
 
+#TODO: BUG: preprint_relation doesn't seem to be working!
 
 class Item:
 	def __init__(self, doi=None, source=None, publisher=None, pub_date=None, load_source=None, insert_date=None, newsletter=None, has_relations=None, preprint_relation=None, item_type=None, author_ids=None):
