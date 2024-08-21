@@ -12,6 +12,18 @@ class OAW_Item:
 		self.rors = [strip_url_prefix(e) for e in rors.split(';')]
 		self.has_preprint_copy = has_preprint_copy
 		self.preprint_doi = preprint_doi
+		self.in_o = None
+		self.in_d = None
+	
+	def in_oaw(self):
+
+	def 
+
+# monkey patching
+def in_oaw(self):
+
+
+
 
 
 def strip_url_prefix(url):
@@ -36,10 +48,11 @@ oaw_items = [i for i in oaw_items if '013sk6x84' in i.rors]
 # oaw_items1 = [i for i in oaw_items if '013sk6x84' in i.rors] #2406
 # oaw_items2 = [i for i in oaw_items if 'Janelia' in i.institutions] #2406
 
-
-minimum_date = qc.datetime(2007, 1, 1)
+#minimum_date = qc.datetime(2007, 1, 1)
+minimum_date = qc.datetime(2024, 1, 1)
 url = f'https://dis.int.janelia.org/doi/inserted/{str(minimum_date.date())}'
 response = qc.get_request(url)
+
 print(f"Obtained {len(response['data'])} DOIs inserted after {minimum_date.date()}")
 dis_items = [ qc.create_item_object(doi_record) for doi_record in response['data'] ]
 dis_items = [ item for item in dis_items if item.item_type == 'preprint' or item.item_type == 'journal-article' ]
@@ -76,6 +89,15 @@ for item in dis_has_affiliations_dict.values():
 		janelia.append(item)
 	else:
 		no_janelia.append(item)
+
+# Of those 870 papers, how many have a Janelian author, based on orcids?
+jrc_author = 0
+no_jrc_author = 0
+for i in dis_has_affiliations_dict.values(): 
+	if i.author_ids:
+		jrc_author += 1
+	else:
+		no_jrc_author += 1
 
 # Of those 132 papers that aren't in OAW and do have author affiliations, 31 of them don't mention janelia in the affiliations.
 # >>> len(janelia)

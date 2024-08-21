@@ -4,7 +4,7 @@ from collections.abc import Iterable
 
 
 class Item:
-	def __init__(self, doi=None, source=None, publisher=None, pub_date=None, load_source=None, insert_date=None, newsletter=None, has_relations=None, preprint_relation=None, item_type=None):
+	def __init__(self, doi=None, source=None, publisher=None, pub_date=None, load_source=None, insert_date=None, newsletter=None, has_relations=None, preprint_relation=None, item_type=None, author_ids=None):
 		self.doi = doi
 		self.source = source
 		self.publisher = publisher
@@ -15,30 +15,15 @@ class Item:
 		self.has_relations = has_relations
 		self.preprint_relation = preprint_relation if preprint_relation is not None else ()
 		self.item_type = item_type
+		self.author_ids = author_ids # a list of employee IDs
+		self.affiliations = None # should be a flat list
 		self.author_list = []
-	
+
 	def add_authors(self, authors):
 		self.author_list.extend(authors)
-	
-	def get_affiliations(self): # https://stackoverflow.com/questions/2158395/flatten-an-irregular-arbitrarily-nested-list-of-lists
-		xs = [a.affiliations for a in self.author_list]
-		result = []
-		for x in xs:
-			if isinstance(x, Iterable) and not isinstance(x, (str, bytes)):
-				result.extend(self.get_affiliations_from_iterable(x))
-			else:
-				result.append(x)
-		return(result)
-	
-	# Helper method to handle recursive calls on nested iterables
-	def get_affiliations_from_iterable(self, iterable):
-		result = []
-		for item in iterable:
-			if isinstance(item, Iterable) and not isinstance(item, (str, bytes)):
-				result.extend(self.get_affiliations_from_iterable(item))
-			else:
-				result.append(item)
-		return result
+		
+	def has_affiliations(self):
+		return(True if self.affiliations else False)
 
 
 class Author:
@@ -53,7 +38,7 @@ class Author:
 
 def create_item_object(doi_record):
 	item = Item(
-	doi = doi_record['doi'] if 'doi' in doi_record else doi_record['DOI'], # In DIS DB, DataCite only has DOI; Crossref has both doi and DOI
+	doi = doi_record['doi'], # In DIS DB, DataCite only has 'doi'; Crossref has both 'doi' and 'DOI'. The 'doi' in Crossref records is inserted by Rob.
 	source = doi_record['jrc_obtained_from'],
 	publisher = doi_record['publisher'],
 	pub_date = doi_record['jrc_publishing_date'],
@@ -62,12 +47,14 @@ def create_item_object(doi_record):
 	newsletter = doi_record['jrc_newsletter'] if 'jrc_newsletter' in doi_record else None,
 	has_relations = get_relation_boolean(doi_record),
 	preprint_relation = get_preprint_relation(doi_record),
-	item_type = get_type(doi_record)
+	item_type = get_type(doi_record),
+	author_ids = doi_record['jrc_author'] if 'jrc_author' in doi_record else []
 	)
 	if 'author' in doi_record and 'creators' not in doi_record:
 		item.add_authors(create_author_objects(doi_record['author']))
 	if 'creators' in doi_record and 'author' not in doi_record:
 		item.add_authors(create_author_objects(doi_record['creators']))
+	item.affiliations = add_affiliations(item) # need to add affiliations after adding authors, because this function uses author objects
 	return(item)
 
 def get_relation_boolean(doi_record):
@@ -96,6 +83,29 @@ def get_preprint_relation(doi_record):
 			return( ('is-preprint-of', doi_record['jrc_preprint']) )
 	else:
 		return(None)
+
+def add_affiliations(item): # https://stackoverflow.com/questions/2158395/flatten-an-irregular-arbitrarily-nested-list-of-lists
+	if item.affiliations is None: # We don't want to do this flattening procedure every time we ask whether it has affiliations 
+		xs = [a.affiliations for a in item.author_list]
+		result = []
+		for x in xs:
+			if isinstance(x, Iterable) and not isinstance(x, (str, bytes)):
+				result.extend(get_affiliations_from_iterable(x))
+			else:
+				result.append(x)
+		item.affiliations = result
+	return(item.affiliations)
+	
+def get_affiliations_from_iterable(iterable): # Helper function to handle recursive calls on nested iterables
+	result = []
+	for item in iterable:
+		if isinstance(item, Iterable) and not isinstance(item, (str, bytes)):
+			result.extend(item.get_affiliations_from_iterable(item))
+		else:
+			result.append(item)
+	return result
+
+
 
 #### Function related to author objects ####
 
