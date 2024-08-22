@@ -9,12 +9,12 @@ class Item:
 		self.doi = doi
 		self.source = source
 		self.publisher = publisher
-		self.pub_date = datetime.strptime(pub_date, '%Y-%m-%d') if pub_date else None
+		self.pub_date = datetime.strptime(pub_date, '%Y-%m-%d') if pub_date else None #year, month, day
 		self.load_source = load_source
 		self.insert_date = datetime.strptime(insert_date, '%a, %d %b %Y %H:%M:%S %Z') if insert_date else None 
 		self.newsletter = datetime.strptime(newsletter.split()[0], '%Y-%m-%d') if newsletter else None
 		self.has_relations = has_relations
-		self.preprint_relation = preprint_relation if preprint_relation is not None else ()
+		self.preprint_relation = preprint_relation if preprint_relation is not None else () # looks like: ('has-preprint', ['10.1101/003541']) OR ('is-preprint-of', ['10.1073/pnas.1713895115'])
 		self.item_type = item_type
 		self.author_ids = author_ids # a list of employee IDs
 		self.affiliations = None # should be a flat list
@@ -47,7 +47,7 @@ def create_item_object(doi_record):
 	insert_date = doi_record['jrc_inserted'],
 	newsletter = doi_record['jrc_newsletter'] if 'jrc_newsletter' in doi_record else None,
 	has_relations = get_relation_boolean(doi_record),
-	preprint_relation = get_preprint_relation(doi_record),
+	preprint_relation = get_preprint_relation(doi_record), 
 	item_type = get_type(doi_record),
 	author_ids = doi_record['jrc_author'] if 'jrc_author' in doi_record else []
 	)

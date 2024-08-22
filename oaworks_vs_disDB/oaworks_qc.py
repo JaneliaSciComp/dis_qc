@@ -2,11 +2,13 @@ import csv
 import re
 import qcmodule as qc
 from datetime import datetime
+from collections import Counter
 
 class OAW_Item:
-	def __init__(self, doi=None, publisher=None, pub_date=None, institutions=None, rors=None, has_preprint_copy=None, preprint_doi=None):
+	def __init__(self, doi=None, publisher=None, journal=None, pub_date=None, institutions=None, rors=None, has_preprint_copy=None, preprint_doi=None):
 		self.doi = doi
 		self.publisher = publisher
+		self.journal = journal
 		self.pub_date = datetime.strptime(pub_date, '%Y-%m-%d') if pub_date else None
 		self.institutions = institutions
 		self.rors = [strip_url_prefix(e) for e in rors.split(';')]
@@ -31,7 +33,7 @@ oaw_items=[]
 for n in range(1, len(lines)):
 	line = lines[n]
 	oaw_items.append(
-		OAW_Item(doi=line[0], publisher=line[7], pub_date=line[1], institutions=line[15], rors=line[16], has_preprint_copy=line[28], preprint_doi=line[29])
+		OAW_Item(doi=line[0], publisher=line[7], journal=line[8], pub_date=line[1], institutions=line[15], rors=line[16], has_preprint_copy=line[28], preprint_doi=line[29])
 	)
 
 oaw_items = [i for i in oaw_items if '013sk6x84' in i.rors] 
@@ -46,7 +48,7 @@ response = qc.get_request(url)
 
 print(f"Obtained {len(response['data'])} DOIs inserted after {minimum_date.date()}")
 dis_items = [ qc.create_item_object(doi_record) for doi_record in response['data'] ]
-dis_items = [ item for item in dis_items if item.item_type == 'preprint' or item.item_type == 'journal-article' ]
+dis_items = [ item for item in dis_items if item.item_type == 'journal-article' ]
 oaw_dois = [item.doi for item in oaw_items]
 for item in dis_items:
 	if item.doi in oaw_dois:
@@ -68,21 +70,44 @@ in_oaw_but_not_dis = [item for item in oaw_items if item.in_d is False]
 in_both = set(dis_dict.keys()).intersection(oaw_dois)
 
 # >>> len(dis_items)
-# 3013
+# 2278
+# >>> len(oaw_items)
+# 2406
 # >>> len(in_dis_but_not_oaw)
-# 1002
+# 264
 # >>> len(in_oaw_but_not_dis)
-# 395
+# 392
 # >>> len(in_both)
-# 2011
+# 2014
 
-#dis_only_dict = {dis_dict[s].doi: dis_dict[s] for s in in_dis_but_not_oaw }
+# Are we systematically missing certain journals?
+journals = [item.journal for item in in_oaw_but_not_dis]
+journal_counts = Counter(journals)
+journal_counts_sorted = {k: v for k, v in sorted(journal_counts.items(), key=lambda item: item[1], reverse=True)}
+with open('papers_we_missed_by_journal.csv', 'w') as outF: 
+	for k, v in journal_counts_sorted.items():
+		outF.write(f'{k},{v}\n')
+
+# How many of these papers have any author affiliations?
 dis_only_has_affiliations = [item for item in in_dis_but_not_oaw if item.has_affiliations()]
 dis_only_lacks_affiliations = [item for item in in_dis_but_not_oaw if not item.has_affiliations()]
 
-# len(dis_only_has_affiliations)
-# 132
-# 85% of the papers that are in DIS DB, but not OAW, lack any author affiliations. (870/1002)
+# len(dis_only_lacks_affiliations)
+# 197
+# 75% of the papers that are in DIS DB, but not OAW, lack any author affiliations. (197/264)
+
+oaw_only_has_affiliations = [item for item in in_oaw_but_not_dis if item.rors]
+oaw_only_lacks_affiliations = [item for item in in_oaw_but_not_dis if not item.rors]
+
+# >>> len(oaw_only_has_affiliations)
+# 392
+# >>> len(oaw_only_lacks_affiliations)
+# 0
+# All OAW papers have affiliations.
+
+# I added three papers (10.1016/j.bpj.2023.11.1743, 10.3389/fnins.2023.1337612, 10.1016/j.bbagen.2023.130449) to DIS DB that were in OAW but not DIS DB. 
+# They had no author affiliations, so no mention of Janelia in the crossref metadata.
+# This may be the case for all of the papers that we missed.
 
 janelia = []
 no_janelia = []
@@ -92,18 +117,18 @@ for item in dis_only_has_affiliations:
 	else:
 		no_janelia.append(item)
 
-# Of those 132 papers that aren't in OAW and do have author affiliations, 31 of them don't mention janelia in the affiliations.
+# Of those 67 papers that aren't in OAW and do have author affiliations, 29 of them don't mention janelia in the affiliations.
 # >>> len(janelia)
-# 101
+# 38
 # >>> len(no_janelia)
-# 31
-# Spot checking these 31, they were probably added by Jaime. Several of them are former Janelians who used their janelia.org email, but didn't include janelia in their author affiliations.
+# 29
+# Spot checking these 29, they were probably added by Jaime. Several of them are former Janelians who used their janelia.org email, but didn't include janelia in their author affiliations.
 # Some are janelians who only put HHMI in their affiliation.
 # In at least one case, Janelia is mentioned on the affiliations in the website but is mysteriously absent from the crossref metadata.
 # Basically, these are fringe/debatable cases.
 
 
-# Of those 870 papers that lack affiliations, how many have a Janelian author, based on orcids?
+# Of those DIS-only papers that lack affiliations, how many have a Janelian author, based on orcids?
 jrc_author = []
 no_jrc_author = []
 for i in dis_only_lacks_affiliations: 
@@ -113,12 +138,12 @@ for i in dis_only_lacks_affiliations:
 		no_jrc_author.append(i)
 
 # >>> len(jrc_author)
-# 600
+# 92
 # >>> len(no_jrc_author)
-# 270
-# About two thirds of them do have an author with a Janelia ORCID. (Or simply an employee Id manually added by me)
+# 105
+# About half of them do have an author with a Janelia ORCID. (Or simply an employee Id manually added)
 
-# So there's still a mysterious 270 papers that don't have any Janelia orcids and don't have any author affiliations. 
+# So there's still a mysterious 105 papers that don't have any Janelia orcids and don't have any author affiliations. 
 # Spot checking, most of them seem legit. There are some weird ones, e.g. broken DOIs, or alumni only, or no janelians/mention of janelia.
 
 after2024 = 0
@@ -130,10 +155,17 @@ for item in janelia:
 		after2024 += 1
 
 # >>> after2024
-# 45
+# 18
 # >>> before2024
-# 56
-# Of those 101 papers that do have Janelia in the affiliations and which OAW missed, 45% are from 2024.
+# 20
+# Of those 38 papers that do have Janelia in the affiliations and which OAW missed, about half are from 2024.
+thisyear_oaw = [item for item in oaw_items if item.pub_date > qc.datetime(2024, 1, 1)]
+thisyear_dis = [item for item in dis_items if item.pub_date > qc.datetime(2024, 1, 1)]
+# >>> len(thisyear_oaw)
+# 63
+# >>> len(thisyear_dis)
+# 111
+
 
 manual = []
 sync = []
@@ -144,10 +176,10 @@ for item in dis_only_has_affiliations:
 		sync.append(item)
 
 # >>> len(manual)
-# 2
+# 1
 # >>> len(sync)
-# 130
-# Of those 132 papers that aren't in OAW and do have author affiliations, 130 of them were identified by sync (or by Jaime). 2 were identified by me.
+# 66
+# Of those 67 papers that aren't in OAW and do have author affiliations, Only one was identified by me.
 
 all_manual = [ item for item in dis_items if item.load_source=='Manual' ]
 oaw_items_dict = {item.doi: item for item in oaw_items}
@@ -156,11 +188,29 @@ for item in manual:
 	if item.doi in oaw_items_dict:
 		manual_oaw_overlap += 1
 
-# None of the 23 items that I've found manually are in OA.Works.
-
-for item in no_jrc_author[0:16]: # the mysterious 270
-	print(item.doi)
+# None of the 9 papers that I've found manually are in OA.Works.
 
 oaw_pp = [ item for item in oaw_items if item.has_preprint_copy=='true' ]
-dis_pp = [ item for item in dis_items if item.item_type=='journal-article' and item.preprint_relation is True ]
+dis_pp = [ item for item in dis_items if item.item_type=='journal-article' and item.preprint_relation != () and item.preprint_relation[0] == 'has-preprint' ]
+
+# >>> len(oaw_pp)
+# 435
+# >>> len(dis_pp)
+# 459
+
+pp_ratio_by_year = {}
+for y in range(2007, 2025):
+	oaw_pp_y = len([item for item in oaw_pp if qc.datetime(y, 1, 1) < item.pub_date and item.pub_date < qc.datetime(y+1, 1, 1) ])
+	oaw_nopp_y = len([ item for item in oaw_items if item.has_preprint_copy=='false' and qc.datetime(y, 1, 1) < item.pub_date and item.pub_date < qc.datetime(y+1, 1, 1)])
+	dis_pp_y = len([item for item in dis_pp if qc.datetime(y, 1, 1) < item.pub_date and item.pub_date < qc.datetime(y+1, 1, 1) ])
+	dis_nopp_y = len([ item for item in dis_items if item.item_type=='journal-article' and item.preprint_relation == () and qc.datetime(y, 1, 1) < item.pub_date and item.pub_date < qc.datetime(y+1, 1, 1)])
+	pp_ratio_by_year[str(y)] = [
+		oaw_pp_y/(oaw_pp_y+oaw_nopp_y), 
+		dis_pp_y/(dis_pp_y+dis_nopp_y)
+		]
+
+with open('preprint_ratios.csv', 'w') as outF:
+	outF.write('Year,OAW: papers with a preprint,DIS: papers with a preprint\n')
+	for y, v in pp_ratio_by_year.items():
+		outF.write(f'{y},{round(v[0]*100, 1)}%,{round(v[1]*100, 1)}%\n')
 
