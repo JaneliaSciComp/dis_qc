@@ -1,0 +1,10 @@
+The DIS database draws data from the following sources:
+
+1. Our previous librarian (Jaime Palay’s) citation collection. She developed this collection manually over many years, and stored the citations in EndNote. The citations were imported into DIS DB once, in May of 2024. Nearly all these citations should be academic papers with at least one Janelia author. However, there are some ‘gray area’ items. For example, there are some articles with only a recent Janelia alumna/alumnus as author. There may also be a few popular news articles about Janelia science, or artistic or educational materials produced by Janelians. Jaime’s sources, as far as we know, were bioRxiv, PubMed, Google Scholar, and EBSCO.
+2. All Crossref items (ever) that have ‘Janelia’ in the author affiliations. These are (all) retrieved weekly using the Crossref API. (sync/bin/update_dois.py)
+3. All papers where an author’s ORCID indicates that they currently work at Janelia, based on the Employment section (affiliations) of their ORCID profile. Janelian ORCIDs are stored in the orcid collection. Author ORCIDs are discovered in Crossref/DataCite metadata. (sync/bin/update_orcid.py. See README in dis-utilities/sync)
+4. All DataCite items (ever) that meet conditions 2 or 3, above.
+5. All DataCite items (ever) that have the Janelia DOI prefix (10.25378). (sync/bin/update_dois.py)
+6. All figshare items downloaded from the figshare API with institution=295. (Our figshare groups are 11380 (Janelia Research Campus) and 49461 (CellMap), but the institution alone covers both.) These were downloaded once. After some inspection, it was determined that repeated retrievals from the figshare API are not necessary, as these items are in DataCite. (sync/bin/pull_figshare.py)
+7. All bioRxiv items (ever) that meet either conditions 2 or 3, above. These are retrieved daily. (sync/bin/pull_bioRxiv.py)
+8. All arXiv items (ever) that meet either conditions 2 or 3, above. These are retrieved daily. (sync/bin/pull_arxiv.py)

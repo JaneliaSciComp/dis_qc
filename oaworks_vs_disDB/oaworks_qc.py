@@ -69,6 +69,10 @@ in_dis_but_not_oaw = [item for item in dis_items if item.in_o is False]
 in_oaw_but_not_dis = [item for item in oaw_items if item.in_d is False]
 in_both = set(dis_dict.keys()).intersection(oaw_dois)
 
+# with('in_dis_but_not_oaw.txt', 'w') as outF:
+# 	for item in in_dis_but_not_oaw:
+# 		print(f'{item.doi}\n')
+
 # >>> len(dis_items)
 # 2278
 # >>> len(oaw_items)
