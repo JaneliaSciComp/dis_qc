@@ -1,0 +1,10 @@
+Sulav at HQ sent Rob all the publications on Janelia.org in JSON format. Then Rob parsed the JSON and gave me three documents: 
+1) not_in_crossref_datacite.txt is 21 DOIs that were neither in crossref nor datacite. I manually looked through these. Most were typos. I was able to recover 4 true Janelia papers that weren't already in our database. 
+2) not_in_mongo.txt is 945 papers (there's some redundancy in Sulav's data) that were not in our database but were in either crossref or datacite. I split this into four files:
+2a) dois_not_in_crossref.txt - 3 DOIs. All are true Janelia DOIs. They're DataCite DOIs.
+2b) dois_w_affiliations.txt - 264 DOIs. Automated checking revealed one Janelia paper (10.1093/bioinformatics/bts543). The rest appear to be have at least one author who has been at Janelia at one time or another, but they didn't include Janelia in their affiliations.*
+2c) dois_w_no_affiliations.txt - 673 DOIs that are in Crossref, but don't have any author affiliations. I manually checked 30 of them, and found one true Janelia paper. (Janelia in affiliations.) After I filter for papers from 2008 onward, I get that down to 472.
+2d) dois_w_no_author.txt - No authors in Crossref metadata. Recovered two articles with Janelia authors, but they're more like popular articles than academic, so I wouldn't include them.
+3) missing_doi.txt - This is 350 papers where Jaime or I neglected to include a DOI.
+
+*In my notes, I call this a "Gray zone" affiliation. Even those papers that I marked as not having a Janelia author might also be "Gray zone" affiliations, and these are just people whose names I don't recognize because they were here before my time.

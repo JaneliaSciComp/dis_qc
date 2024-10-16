@@ -1,0 +1,350 @@
+Connectome-constrained Latent Variable Model of Whole-Brain Neural Activity
+Unraveling Single-Particle Trajectories Confined in Tubular Networks
+Optogenetics
+Neural Correlates of Cognition in Primary Visual versus Downstream Posterior Cortices During Evidence Accumulation
+A perspective on Microscopy Metadata: data provenance and quality control
+Learning Guided Electron Microscopy with Active Acquisition
+Teaching deep neural networks to localize single molecules for super-resolution microscopy
+Importance Weighted Adversarial Variational Autoencoders for Spike Inference from Calcium Imaging Data
+Teaching deep neural networks to localize single molecules for super-resolution microscopy
+Model-based Bayesian inference of neural activity and connectivity from all-optical interrogation of a neural circuit
+Anisotropic EM Segmentation by 3D Affinity Learning and Agglomeration
+Discovering Neuronal Cell Types and Their Gene Expression Profiles Using a Spatial Point Process Mixture Model
+Point process latent variable models of larval zebrafish behavior
+Microtubule Tracking in Electron Microscopy Volumes
+Inpainting Networks Learn to Separate Cells in Microscopy Images
+Simultaneous computation of dynamical and equilibrium information using a weighted ensemble of trajectories
+Simultaneous computation of dynamical and equilibrium information using a weighted ensemble of trajectories
+Simultaneous computation of dynamical and equilibrium information using a weighted ensemble of trajectories
+A cytometry-based assay to determine optimal Janelia Fluor dye labelling of Halo and SNAP tags.
+Cellular level analysis of the locomotor neural circuits in Drosophila melanogaster.
+Multiple animals tracking in video using part affinity fields
+Probing synaptic transmission and behavior in Drosophila with optogenetics: a laboratory exercise
+Insights from Biology: low power circuits in the fruit fly.
+Honeybee detection and pose estimation using convolutional neural networks.
+A connectome based hexagonal lattice convolutional network model of the Drosophila visual system.
+Science holds the key to unlocking economic success.
+Discrete flow posteriors for variational inference in discrete dynamical systems.
+Joint deformable registration of large EM image volumes: a matrix solver approach.
+NeuroStorm: accelerating brain science discovery in the cloud.
+BIM for Facilities Management: Providing value at the Howard Hughes Medical Institute.
+Model-based Bayesian inference of neural activity and connectivity from all-optical interrogation of a neural circuit.
+Network-size independent covering number bounds for deep networks.
+Genomic probes.
+Regularization and nonlinearities for neural language models: when are they needed?
+Learning visual motion in recurrent neural networks.
+Recurrent linear models of simultaneously-recorded neural populations.
+Extracting regions of interest from biological images with convolutional sparse block coding.
+Fast and accurate spike sorting of high-channel count probes with KiloSort.
+Fast amortized inference of neural activity from calcium imaging data with variational autoencoders.
+Extracting low-dimensional dynamics from multiple large-scale neural population recordings by learning to predict correlations.
+Genetically encoded biosensors.
+Volume imaging.
+Dynamics of leg muscle function in tammar wallabies (M. eugenii) during level versus incline hopping.
+A protocol demonstrating 60 different Drosophila behaviors in one assay.
+Time-accuracy tradeoffs in kernel prediction: controlling prediction quality.
+Semiparametric spectral modeling of the Drosophila connectome.
+Visualization of the domain structure of an L-type Ca2+ channel using electron cryo-microscopy.
+Calcium-independent disruption of microtubule dynamics by nanosecond pulsed electric fields in U87 human glioblastoma cells
+Shape constrained automatic segmentation of the liver based on a heuristic intensity model.
+Multi-object segmentation of head bones.
+Multi-object segmentation with coupled deformable models.
+Model-based auto-segmentation of knee bones and cartilage in MRI data.
+Tracking by assignment facilitates data curation.
+Mapping auto-context decision forests to deep ConvNets for semantic segmentation.
+Automatic Extraction of Anatomical Landmarks From Medical Image Data: An Evaluation of Different Methods
+Automatic extraction of mandibular nerve and bone from cone-beam CT data.
+Improving deformable surface meshes through omni-directional displacements and MRFs.
+Automatic detection and classification of teeth in CT data.
+Active graph matching for automatic joint segmentation and annotation of C. elegans.
+An empirical analysis of deep network loss surfaces.
+A fully genetically encoded protein architecture for optical control of peptide ligand concentration.
+Expansion microscopy.
+Learning recurrent representations for hierarchical behavior modeling.
+Bessel beam plane illumination microscope.
+Sampling Requirements for Stable Autoregressive Estimation
+Robust estimation of self-exciting point process models with application to neuronal modeling.
+Large-scale electron microscopy image segmentation in spark.
+MLlib: Machine learning in Apache Spark.
+Together we are stronger: fusion protects mitochondria from autophagosomal degradation.
+Fuse or die: Shaping mitochondrial fate during starvation.
+Sample complexity of learning Mahalanobis distance metrics.
+A high throughput (>90%), large compensation range, single-prism femtosecond pulse compressor.
+Fast stitching of large 3d biological datasets.
+Automatic landmark correspondence detection for ImageJ.
+Introduction to ImgLib2
+Advanced Programming with ImgLib2
+Mechanisms of Drosophila retinal morphogenesis: the virtues of being progressive.
+Role of the morphogenetic furrow in establishing polarity in the Drosophila eye.
+Role of decapentaplegic in initiation and progression of the morphogenetic furrow in the developing Drosophila retina.
+eyelid antagonizes wingless signaling during Drosophila development and has homology to the Bright family of DNA-binding proteins.
+Eye development in Drosophila: formation of the eye field and control of differentiation.
+Dorsoventral patterning in the Drosophila retina by wingless.
+Y do we drink?
+Early retinal development in Drosophila.
+Genetic control of acute ethanol-induced behaviors in Drosophila.
+A screen for dominant modifiers of ro(Dom), a mutation that disrupts morphogenetic furrow progression in Drosophila, identifies groucho and hairless as regulators of atonal expression.
+Drosophila fasciclinII is required for the formation of odor memories and for normal sensitivity to alcohol.
+Rough eye is a gain-of-function allele of amos that disrupts regulation of the proneural gene atonal during Drosophila retinal differentiation.
+Drugs, flies, and videotape: the effects of ethanol and cocaine on Drosophila locomotion.
+Mechanism of hedgehog signaling during Drosophila eye development.
+Drosophila melanogaster, a genetic model system for alcohol research.
+Rapid and chronic: two distinct forms of ethanol tolerance in Drosophila.
+Addiction-like behavior in Drosophila.
+The genetic relationships between ethanol preference, acute ethanol sensitivity, and ethanol tolerance in Drosophila melanogaster.
+Inferring neural population dynamics from multiple partial recordings of the same neural circuit.
+Comparing strategies to reactivate fetal globin expression for the treatment of beta-globinopathies.
+Ionic liquids based on FeCl(3) and FeCl(2). Raman scattering and ab initio calculations.
+Statistical clustering applied to adaptive matched field processing
+Learning to Agglomerate Superpixel Hierarchies
+Maximin affinity learning of image segmentation
+Identifying synapses using deep and wide multiscale recursive networks.
+Focused proofreading: efficiently extracting connectomes from segmented EM images.
+Small sample learning of superpixel classifiers for EM segmentation- extended version.
+Automatic neuron type identification by neurite localization in the Drosophila medulla.
+Annotating synapses in large EM datasets.
+A context-aware delayed agglomeration framework for EM segmentation.
+Insertion of MP20 into lens fibre cell plasma membranes correlates with the formation of an extracellular diffusion barrier.
+Galectin-3 is associated with the plasma membrane of lens fiber cells.
+Slow sodium channel inactivation in CA1 pyramidal cells.
+Voltage- and space-clamp errors associated with the measurement of electrotonically remote synaptic events.
+Mechanisms shaping glutamate-mediated excitatory postsynaptic currents in the CNS.
+Properties of slow, cumulative sodium channel inactivation in rat hippocampal CA1 pyramidal neurons.
+Action potential bursting in subicular pyramidal neurons is driven by a calcium tail current.
+Resting and active properties of pyramidal neurons in subiculum and CA1 of rat hippocampus.
+Action potential initiation and backpropagation in neurons of the mammalian CNS.
+Postsynaptic depolarization requirements for LTP and LTD: a critique of spike timing-dependent plasticity.
+Dendritic calcium spike initiation and repolarization are controlled by distinct potassium channel subtypes in CA1 pyramidal neurons.
+Prolonged sodium channel inactivation contributes to dendritic action potential attenuation in hippocampal pyramidal neurons.
+Diversity and dynamics of dendritic signaling.
+Activity-dependent action potential invasion and calcium influx into hippocampal CA1 dendrites.
+Determinants of voltage attenuation in neocortical pyramidal neuron dendrites.
+Dendritic sodium spikes are variable triggers of axonal action potentials in hippocampal CA1 pyramidal neurons.
+Interneurons in the stratum lucidum of the rat hippocampus: an anatomical and electrophysiological characterization.
+Perforated patch-clamp analysis of the passive membrane properties of three classes of hippocampal neurons.
+Dendritic attenuation of synaptic potentials and currents: the role of passive membrane properties.
+Specialized electrophysiological properties of anatomically identified neurons in the hilar region of the rat fascia dentata.
+Dendritic glutamate receptor channels in rat hippocampal CA3 and CA1 pyramidal neurons.
+Probing dendritic function with patch pipettes.
+Dichotomy of action-potential backpropagation in CA1 pyramidal neuron dendrites.
+Wing buzzing by male orchid bees, Eulaema meriana (Hymenoptera: Apidae)
+Male territoriality and alternative male behaviors in the euglossine bee, Eulaema meriana (Hymenoptera: Apidae)
+Phylogeny of the Tribe Cerataphidini (Homoptera) and the Evolution of the Horned Soldier Aphids
+Morphogenesis and gene expressions in the parthenogenetic embryogenesis of the pea aphid Acyrthosiphon pisum
+Prospects in aphid genetics
+Gene Expression in Acyrthosiphon Pisum (Hemiptera: Aphididae)
+Gene expression patterns underlying wing polyphenism and polymorphism in the pea aphid
+Molecular Basis of Facultative Asexuality in Aphids
+A patterning difference underlying viviparous and oviparous development in the pea aphid
+Evolution, Development, and the Predictable Genome
+Investigation of the role of Aubergine RNA-binding proteins in the reproductive plasticity of the pea aphid, Acyrthosiphon pisum
+Potential Patterning Differences Underlying Oviparous and Viviparous Development in the Pea Aphid
+The evolution of soldiers in aphids.
+The developmental basis for allometry in insects.
+Divergence of larval morphology between Drosophila sechellia and its sibling species caused by cis-regulatory evolution of ovo/shaven-baby.
+Evolutionary developmental biology and the problem of variation.
+Body-size evolution: how to evolve a mammoth moth.
+Molecular phylogenetic evidence for multiple gains or losses of ant mutualism within the aphid genus Chaitophorus.
+Body-size control: how an insect knows it has grown enough.
+The Hox gene Ultrabithorax modulates the shape and size of the third leg of Drosophila by influencing diverse mechanisms.
+The origin of a mutualism: a morphological trait promoting the evolution of ant-aphid mutualisms.
+The developmental genetics of microevolution.
+Split--pool synthesis of 1,3-dioxanes leading to arrayed stock solutions of single compounds sufficient for multiple phenotypic and protein-binding assays.
+On the action of major loci affecting sex determination in Drosophila melanogaster.
+Hormonal control of insect epidermal cell commitment in vitro.
+Dendritic reorganization of an identified motoneuron during metamorphosis of the tobacco hornworm moth.
+Sex-specific regulation of yolk protein gene expression in Drosophila.
+Sex determination and dosage compensation in melanogaster.
+Sex determination in Drosophila melanogaster: analysis of transformer-2 , a sex-transforming locus.
+Pheromone binding and inactivation by moth antennae.
+A molecular analysis of transformer, a gene in Drosophila that controls female sexual differentiation.
+Endocrine regulation of the form and function of axonal arbors during insect metamorphosis.
+An O(ND) difference algorithm and its variations.
+Drosophila doublesex gene controls somatic sexual differentiation by producing alternatively spliced mRNAs encoding related sex-specific polypeptides.
+The sex determination locus transformer-2 of Drosophila encodes a polypeptide with similarity to RNA binding proteins.
+Evaporative cooling of spin-polarized atomic hydrogen.
+Merrill C. Sosman lecture. Drugs, behavior, and brain chemistry.
+A rapid and simple method for preparation of RNA from Saccharomyces cerevisiae.
+Postmetamorphic cell death in the nervous and muscular systems of Drosophila melanogaster.
+Isolation and characterization of QCR9, a nuclear gene encoding the 7.3-kDa subunit 9 of the Saccharomyces cerevisiae ubiquinol-cytochrome c oxidoreductase complex. An intron-containing gene with a conserved sequence occurring in the intron of COX4.
+Topographic EEG analysis in patients with benign focal epilepsy of childhood (BFEC).
+Near-field magneto-optics and high density data storage. (With commentary)
+The regulation of transmitter expression in postembryonic lineages in the moth Manduca sexta. II. Role of cell lineage and birth order.
+The maleless protein associates with the X chromosome to regulate dosage compensation in Drosophila.
+Near-field fluorescence imaging of cytoskeletal actin. (With commentary)
+Sex-lethal, master and slave: the hierarchy of germline sex determination in Drosophila.
+Suffix arrays: a new method for on-line string searches.
+Combined shear force and near-field scanning optical microscopy (With commentary)
+Neuropeptide induction of cyclic GMP increases in the insect CNS: resolution at the level of single identifiable neurons.
+Dimensions of luminescent oxidized and porous silicon structures.
+Behavioral and neurobiological implications of sex-determining factors in Drosophila.
+A sublinear algorithm for approximate keyword matching.
+Raman studies of steric hindrance and surface relaxation of stepped H-terminated silicon surfaces.
+Toward simplifying and accurately formulating fragment assembly.
+Strain-dependent variation in carbon source regulation of nucleus-encoded mitochondrial proteins of Saccharomyces cerevisiae.
+Proposed method for molecular optical imaging. (With commentary)
+Regulation of nuclear genes encoding mitochondrial proteins in Saccharomyces cerevisiae.
+The uncertain response in the bottlenosed dolphin (Tursiops truncatus).
+The msl-2 dosage compensation gene of Drosophila encodes a putative DNA-binding protein whose expression is sex-specifically regulated by Sex-lethal.
+The rational design of allosteric interactions in a monomeric protein and its applications to the construction of biosensors.
+The regulation of the Drosophila msl-2 gene reveals a function for sex-lethal in translational control.
+RNase MRP correctly cleaves a novel R loop at the mitochondrial DNA leading-strand origin of replication.
+GFP tagging of budding yeast chromosomes reveals that protein-protein interactions can mediate sister chromatid cohesion.
+In vivo localization of DNA sequences and visualization of large-scale chromatin organization using lac operator/repressor recognition.
+Nitric oxide-sensitive guanylate cyclase activity is associated with the maturational phase of neuronal development in insects.
+Control of male sexual behavior and sexual orientation in Drosophila by the fruitless gene.
+Drosophila EcR-B ecdysone receptor isoforms are required for larval molting and for neuron remodeling during metamorphosis.
+Ecdysteroids govern two phases of eye development during metamorphosis of the moth, Manduca sexta.
+Protein engineering and the development of generic biosensors.
+An acid- and base-stable o-nitrobenzyl photolabile linker for solid phase organic synthesis.
+Introduction of fluorescent allosteric signal transduction elements into glucose-binding protein: construction of a novel glucose sensor.
+The effect of cross-linking on thermal inactivation of cellulases. In stability of stabilization of biocatalyst.
+Disruption of a behavioral sequence by targeted death of peptidergic neurons in Drosophila.
+Human whole-genome shotgun sequencing.
+The repeat organizer, a specialized insulator element within the intergenic spacer of the Xenopus rRNA genes.
+Neuropeptide hierarchies and the activation of sequential motor behaviors in the hawkmoth, Manduca sexta.
+Development of the Drosophila mushroom bodies: sequential generation of three distinct types of neurons from a neuroblast.
+Mosaic analysis with a repressible cell marker for studies of gene function in neuronal morphogenesis.
+Hippocampal damage induced by carbon monoxide poisoning and spreading depression is alleviated by chronic treatment with brain derived polypeptides.
+Visualization of large-scale chromatin structure and dynamics using the lac operator/lac repressor reporter system.
+Ethanol intoxication in Drosophila: genetic and pharmacological evidence for regulation by the cAMP signaling pathway.
+Optical imaging of calcium transients in neurons and pharyngeal muscle of C. elegans.
+Dopamine modulates acute responses to cocaine, nicotine and ethanol in Drosophila.
+Short-range and long-range guidance by Slit and its Robo receptors: a combinatorial code of Robo receptors controls lateral position.
+Short-range and long-range guidance by slit and its Robo receptors. Robo and Robo2 play distinct roles in midline guidance.
+Ecdysteroid coordinates optic lobe neurogenesis via a nitric oxide signaling pathway.
+Binocular disparity can explain the orientation of ocular dominance stripes in primate primary visual area (V1).
+Optimal sizes of dendritic and axonal arbors in a topographic projection.
+A wire length minimization approach to ocular dominance patterns in mammalian visual cortex.
+Functional ethanol tolerance in Drosophila.
+A molecular pathway for light-dependent photoreceptor apoptosis in Drosophila.
+A whole-genome assembly of Drosophila.
+A novel family of mammalian taste receptors.
+T2Rs function as bitter taste receptors.
+The RXR ortholog USP suppresses early metamorphic processes in Drosophila in the absence of ecdysteroids.
+Synthesis of 7200 small molecules based on a substructural analysis of the histone deacetylase inhibitors trichostatin and trapoxin.
+Miniature motorized microdrive and commutator system for chronic neural recording in small animals.
+Mammalian sweet taste receptors.
+Orientation preference maps in mammalian visual cortex: A wire length minimization approach.
+Rapid atomic density methods for molecular shape characterization.
+Are complex behaviors specified by dedicated regularoty genes? Reasoning from Drosophila.
+Effects of binaural decorrelation on neural and behavioral processing of interaural level differences in the barn owl (Tyto alba).
+Postnatal development of spike generation in rat medial vestibular nucleus neurons.
+A chemosensory gene family encoding candidate gustatory and olfactory receptors in Drosophila.
+Neural network partitioning by NO and cGMP.
+Independent anchoring and assembly mechanisms of INAD signaling complexes in Drosophila photoreceptors.
+Developmental evolution: Hox proteins ring the changes.
+Network motifs: simple building blocks of complex networks.
+Theoretical neuroscience: state of the art.
+A genomic analysis of gene expresson during the Drosophila life cycle.
+Glutamate-mediated extrasynaptic inhibition: direct coupling of NMDA receptors to Ca(2+)-activated K+ channels.
+Molecular and biochemical characterization of a distinct type of fructose-1,6-bisphosphatase from Pyrococcus furiosus.
+Drosophila Dscam is required for divergent segregation of sister branches and suppresses ectopic bifurcation of axons.
+Memory of sequential experience in the hippocampus during slow wave sleep.
+High-resolution analysis of ethanol-induced locomotor stimulation in Drosophila.
+A novel invertebrate trophic factor related to invertebrate neurotrophins is involved in planarian body regional survival and asexual reproduction.
+Functional dissection of neuroanatomical loci regulating ethanol sensitivity in Drosophila.
+Differences in nuclear gene expression between cells containing monomer and dimer mitochondrial genomes.
+Detection of large interaural delays and its implication for models of binaural interaction.
+Microwave oven synthesis of esters promoted by imidazole.
+Spike sorting in the frequency domain with overlap detection.
+Mutations in the Drosophila glycoprotein hormone receptor, rickets, eliminate neuropeptide-induced tanning and selectively block a stereotyped behavioral program.
+Basic transcription element binding protein is a thyroid hormone-regulated transcription factor expressed during metamorphosis in Xenopus laevis.
+Haemozoin as a marker of placental parasitization.
+Inducible nitric oxide synthase (NOS2) promoter CCTTT repeat polymorphism: relationship to in vivo nitric oxide production/NOS activity in an asymptomatic malaria-endemic population.
+Involvement of the ubiquitin-proteasome system in the early stages of wallerian degeneration.
+Genetic specification of axonal arbors: atonal regulates robo3 to position terminal branches in the Drosophila nervous system.
+Coding of sweet, bitter, and umami tastes: different receptor cells sharing similar signaling pathways.
+TGF-beta signaling activates steroid hormone receptor expression during neuronal remodeling in the Drosophila brain.
+Presynaptic cyclic nucleotide-gated ion channels modulate neurotransmission in the mammalian olfactory bulb.
+Purification, crystallization and preliminary crystallographic analysis of phosphoglucose isomerase from the hyperthermophilic archaeon Pyrococcus furiosus.
+Axon pruning during Drosophila metamorphosis: evidence for local degeneration and requirement of the ubiquitin-proteasome system.
+E74 exhibits stage-specific hormonal regulation in the epidermis of the tobacco hornworm, manduca sexta.
+Exploratory analysis and visualization of speech and music by locally linear embedding.
+Joint MRI bias removal using entropy minimization across images.
+A smorgasbord of features for statistical machine translation.
+In vivo imaging of C. elegans mechanosensory neurons demonstrates a specific role for the MEC-4 channel in the process of gentle touch sensation.
+Intensity versus identity coding in an olfactory system.
+Design, synthesis, and development of novel caprolactam anticonvulsants.
+The receptors for mammalian sweet and umami taste.
+Biophysical constraints on neuronal branching.
+Cortical rewiring and information storage.
+Decoding cilia function: defining specialized genes required for compartmentalized cilia biogenesis.
+Functional magnetic resonance imaging of macaque monkeys performing visually guided saccade tasks: comparison of cortical eye fields with humans.
+Overexpression of broad: a new insight into its role in the Drosophila prothoracic gland cells.
+Antibody humanization and affinity maturation using phage display.
+Computation-based engineering of protein and antibody therapeutics.
+Joint nonparametric alignment for analyzing spatial gene expression patterns of Drosophila imaginal discs.
+Pneumatic capillary gun for ballistic delivery of microparticles.
+Representing part-whole relationships in recurrent neural networks.
+Drosophila and C. elegans models of human age-associated neurodegeneratiove diseases.
+Sparse and composite coherent lattices. (With commentary)
+Tracking multiple mouse contours (without too many samples).
+Compressed domain real-time action recognition.
+A framework for feature selection for background subtraction.
+Image diffusion using saliency bilateral filter.
+Isolation of yeast nuclei and micrococcal nuclease mapping of nucleosome positioning.
+Large-scale biophysical parameter estimation in single neurons via constrained linear regression.
+Unsupervised learning of boosted tree classifier using graph cuts for hand pose recognition.
+Efficient estimation of detailed single-neuron models.
+A new role for microRNA pathways: modulation of degeneration induced by pathogenic human disease proteins.
+Bispecific antibodies for dual-modality cancer therapy: killing two signaling cascades with one stone.
+Unsupervised discovery of action hierarchies in large collections of activity videos.
+Automatic segmentation of nuclei in 3D microscopy images of C. elegans.
+Comparative analysis of spatial patterns of gene expression in Drosophila Melanogaster imaginal discs.
+Functional analysis of thermostable proteins involved in carbohydrate metabolism.
+Supervised learning of image restoration with convolutional networks.
+Alignment of large image series using cubic B-splines tessellation: application to transmission electron microscopy data.
+Hysteresis phenomena of the intelligent driver model for traffic flow.
+Modulation of neuronal voltage-activated calcium and sodium channels by polyamines and pH.
+A rate-efficient approach for establishing visual correspondences via distributed source coding.
+Rate-efficient visual correspondences using random projections.
+CITRIC: A Low-bandwidth wireless camera network platform.
+High speed action recognition and localization in compressed domain videos.
+Multi-modal target tracking using heterogeneous sensor networks.
+Natural image denoising with convolutional networks.
+Boosting adaptive linear weak classifiers for online learning and tracking.
+Inferring elapsed time from stochastic neural processes.
+Trimethyl lock: a stable chromogenic substrate for esterases.
+Structured illumination in total internal reflection fluorescence microscopy using a spatial light modulator.
+Characterization of vibrational resonances of water-vapor interfaces by phase-sensitive sum-frequency spectroscopy.
+Three-dimensional nanoscopy of biological samples.
+Which spatial partition trees are adaptive to intrinsic dimension?
+Circuit dynamics and neural coding in the locust olfactory system.
+A critical role for N-WASp in cell migration during central nervous system development.
+Algebraic approach to recovering topological information in distributed camera networks.
+Like-charge interactions between colloidal particles are asymmetric with respect to sign.
+Machine learning of image analysis with convolutional networks and topological constraints.
+Modulating protein interactions by rational and computational design.
+Reconstruction of sparse circuits using multi-neuronal excitation (RESCUME).
+How different are recently diverged species?: more than 150 phenotypic differences have been reported for the D. melanogaster species subgroup.
+Accelerating feature based registration using the Johnson-Lindenstrauss Lemma.
+Simplified approach to diffraction tomography in optical microscopy.
+Variable phase retarder made of a dielectric elastomer actuator.
+Juvenile hormone action requires paralogous genes in Drosophila melanogaster.
+Lineage-based connectivity map of the Drosophila brain.
+Towards automated high-throughput screening of C. elegans on agar.
+Using Drosophila to reveal insight into protein misfolding disease.
+Over-complete representations on recurrent neural networks can support persistent percepts.
+Anatomic analysis of Gal4 expression patterns of the Rubin line collection: the central complex.
+Boundary learning by optimization with topological constraints.
+Learning to agglomerate superpixel hierarchies.
+Multiple instance learning with manifold bags.
+Probing tension and dynamics in actomyosin mediated cell shape change.
+Molecular evolution of juvenile hormone signaling.
+High resolution segmentation of neuronal tissues from low depth-resolution EM imagery.
+Supervised hypergraph labeling.
+The binding of cholera toxin to the periplasmic vestibule of the type II secretion channel.
+A genetically encoded fluorescent protein in echinoderms marks the history of neuronal activity.
+Design tools for artificial nervous systems.
+Learning hierarchical similarity metrics.
+A mechanistic model of early sensory processing based on subtracting sparse representations.
+Neuronal spike generation mechanism as an oversampling, noise-shaping A-to-D converter.
+Learning animal social behavior from trajectory features.
+A lattice filter model of the visual pathway.
+Efficient automatic 3D-reconstruction of branching neurons from EM data.
+Automated alignment of imperfect EM images for neural reconstruction.
+Distance preserving embeddings for general n-dimensional manifolds.
+3D Haar-like elliptical features for object classification in microscopy.
+Functional organization of the neural circuitry for male courtship behavior in Drosophila.
+The Drosophila genome project: a progress report.

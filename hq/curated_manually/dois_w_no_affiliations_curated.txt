@@ -1,24 +1,34 @@
 10.1523/jneurosci.1416-16.2016 - "Gray zone" affiliation
-10.1016/j.bpj.2008.12.3962 - No Janelia affiliation
-10.1016/j.cmet.2014.05.020 - No Janelia affiliation
-10.1113/jphysiol.2006.125963 - From 2006, No Janelia affiliation
+10.1016/j.bpj.2008.12.3962 - No Janelia authors
+10.1016/j.cmet.2014.05.020 - No Janelia authors
+10.1113/jphysiol.2006.125963 - From 2006, No Janelia authors
 10.3791/60362 - "Gray zone" affiliation
 10.1002/jez.b.3 - From 2003, "Gray zone" affiliation
 10.1016/j.sbi.2009.07.012 - "Gray zone" affiliation
 10.1523/jneurosci.3916-05.2006 - From 2006, "Gray zone" affiliation
-10.1186/gb-2007-8-s1-s2 - From 2007, No Janelia affiliation
+10.1186/gb-2007-8-s1-s2 - From 2007, No Janelia authors
 10.1016/j.molcel.2021.11.011 - "Gray zone" affiliation
-10.3389/fncom.2014.00129
-10.1016/j.jmb.2011.09.008
-10.1523/jneurosci.6519-11.2012
-10.1111/j.1460-9568.2005.04087.x
-10.1101/cshperspect.a005686
-10.1152/jn.00682.2005
-10.1006/meth.1998.0726
-10.1007/s11548-009-0390-2
-10.1523/jneurosci.5743-08.2009
-10.1016/j.mce.2007.07.002
-10.1523/jneurosci.0860-06.2006
+10.1002/cne.20709 - This paper is from 2005, no Janelia authors
+10.1002/anie.200904781 - "Gray zone" affiliation
+10.1002/cbic.201000254 - No Janelia authors
+10.1002/ajp.20317 - This paper is from 2006, "Gray zone" affiliation
+10.1002/bies.201200022 - "Gray zone" affiliation
+10.1002/bies.20436 - This paper is from 2006, "Gray zone" affiliation
+10.1002/anie.200462296 - This paper is from 2005, no Janelia authors
+10.1002/bies.20552 - This paper is from 2007, no Janelia authors
+10.1002/cbic.200500559 - This paper is from 2006, "Gray zone" affiliation
+10.3389/fncom.2014.00129 - "Gray zone" affiliation
+10.1016/j.jmb.2011.09.008 - "Gray zone" affiliation
+10.1523/jneurosci.6519-11.2012 - THIS ONE IS LEGIT
+10.1111/j.1460-9568.2005.04087.x - This paper is from 2005, "Gray zone" affiliation
+10.1101/cshperspect.a005686 - No Janelia authors
+10.1152/jn.00682.2005 - This paper is from 2005
+10.1006/meth.1998.0726 - No Janelia authors
+10.1007/s11548-009-0390-2 - "Gray zone" affiliation
+10.1523/jneurosci.5743-08.2009 - No Janelia authors
+10.1016/j.mce.2007.07.002 - This paper is from 2007
+10.1523/jneurosci.0860-06.2006 - This paper is from 2006
+10.1017/cbo9780511721953.008 - This paper is from 1997
 10.1016/j.neuron.2006.07.018
 10.1016/j.neunet.2011.06.012
 10.1673/031.007.4501
@@ -84,7 +94,6 @@
 10.1016/j.neuron.2006.05.013
 10.1016/j.neurobiolaging.2012.05.014
 10.1152/jn.01040.2005
-10.1002/cne.20709 - This paper is from 2005, no Janelia authors
 10.1016/j.cell.2010.01.002
 10.1038/nn1599
 10.1021/jo9011859
@@ -113,7 +122,6 @@
 10.1016/j.bmcl.2008.02.012
 10.1186/1471-2105-11-274
 10.1038/nn1774
-10.1002/anie.200904781 - "Gray zone" affiliation
 10.1016/j.cell.2006.08.045
 10.1016/j.neuron.2022.09.025
 10.1016/j.neuropharm.2008.07.023
@@ -140,7 +148,6 @@
 10.1007/s10439-020-02468-2
 10.1016/j.molcel.2005.02.030
 10.1038/nn1996
-10.1002/cbic.201000254 - No Janelia authors
 10.1371/journal.pone.0038011
 10.1016/j.str.2012.08.026
 10.1038/nature07003
@@ -389,7 +396,6 @@
 10.1371/journal.pcbi.0030234
 10.1523/jneurosci.4416-10.2011
 10.1038/nmeth.3581
-10.1002/ajp.20317 - This paper is from 2006, "Gray zone" affiliation
 10.1109/cvpr.2016.50
 10.1016/j.cell.2021.05.015
 10.1016/j.cub.2013.03.066
@@ -402,7 +408,6 @@
 10.1016/j.cbpa.2020.04.005
 10.1101/785931
 10.1101/061507
-10.1002/bies.201200022 - "Gray zone" affiliation
 10.1109/iembs.2009.5333980
 10.1038/nn1403
 10.1529/biophysj.107.128223
@@ -446,7 +451,6 @@
 10.1111/j.1525-142x.2007.00174.x
 10.1038/nature03352
 10.1227/neu.0b013e31826cdd5a
-10.1002/bies.20436 - This paper is from 2006, "Gray zone" affiliation
 10.1038/nature11345
 10.1038/s41586-023-06604-5
 10.3389/conf.neuro.11.2008.01.064
@@ -515,7 +519,6 @@
 10.1016/j.pep.2006.02.019
 10.1038/nmeth.1551
 10.1038/nmeth987
-10.1002/anie.200462296 - This paper is from 2005, no Janelia authors
 10.1261/rna.1210411
 10.1002/cne.1385
 10.1038/ng1908
@@ -560,7 +563,6 @@
 10.1016/j.pep.2008.10.018
 10.1016/b978-0-12-417164-0.00013-6
 10.1101/pdb.prot065532
-10.1017/cbo9780511721953.008
 10.1002/hipo.10129
 10.1016/j.neuron.2015.04.012
 10.1007/s00424-007-0353-9
@@ -588,7 +590,6 @@
 10.1074/jbc.m703424200
 10.1038/nature00854
 10.1152/jn.01283.2007
-10.1002/bies.20552 - This paper is from 2007, no Janelia authors
 10.1101/099101
 10.1016/j.neuron.2006.09.014
 10.1016/j.cub.2008.07.094
@@ -596,7 +597,6 @@
 10.1016/j.annepidem.2014.02.018
 10.1186/1471-2121-2-17
 10.1088/0954-3899/39/10/105005
-10.1002/cbic.200500559 - This paper is from 2006, "Gray zone" affiliation
 10.1038/nature11057
 10.1016/j.cell.2015.08.024
 10.1074/jbc.m110.162214

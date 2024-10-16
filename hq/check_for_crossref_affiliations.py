@@ -2,11 +2,10 @@
 # export PYTHONPATH="${PYTHONPATH}:/Users/scarlettv/dis-utilities/utility/bin"
 
 import name_match as nm 
-import qcmodule as qc
 
 
 dois_to_check = []
-with open('not_in_mongo_spot_checked.txt', 'r') as instream:
+with open('from_rob/not_in_mongo.txt', 'r') as instream:
     for doi in instream.read().splitlines():
         dois_to_check.append(doi.split()[0].strip())
 
