@@ -8,12 +8,15 @@ legit_dois = []
 false_dois = []
 with open('curated_manually/dois_w_no_affiliations_after_2007_curated.txt', 'r') as inF:
     lines = inF.readlines()
+    print(f'total dois: {len(set(lines))}')
     for line in lines:
         if "- YES!" in line:
             legit_dois.append(line.split()[0])
             continue
         if "- No" in line:
             false_dois.append(line.split()[0])
+        else:
+            print(line)
 
 legit_dois = set(legit_dois)
 false_dois = set(false_dois)
